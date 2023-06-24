@@ -1,5 +1,5 @@
-# Budget-Constrained-Prompts-for-Dialog-Systems-Official
-Official repository for the project on the ROI analysis for budget constrained prompting. 
+# Frugal Prompting for Dialog Models 
+Official repository for experiments in the 'Frugal Prompting for Dialog Models' paper. 
 
 # Steps
 
