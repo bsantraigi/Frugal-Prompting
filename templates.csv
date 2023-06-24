@@ -1,0 +1,933 @@
+dataset,model,prompt_type,few_shot,background_knowledge,history_signal_type,history_k,variable,value,value_old
+,,manual,TRUE,FALSE,semantic-k;bart;recent-k;full,,prompt_template,"You are an Automated Chat System :
+The task is to give a consistent and engaging response to what the Person1 says based on the summary of the dialog exchange between you and the Person1. Learn from the example below.
+Example:
+This is a summary of a dialog exchange between you and the Person1:
+{0}
+Based on the summary of the dialog exchange, give a consistent and engaging response to the following dialogue by the Person1.
+Person1:{1} 
+Person2:{2}
+Now try it yourself.
+This is a summary of a dialog exchange between you and the Person1:
+{3}
+Given the summary of the dialog exchange between Person1 and Person2, give a consistent and engaging response to the following dialog by Person1
+Person1:{4}
+Person2:","You are an Automated Chat System :
+The task is to give a consistent and engaging response to what the User says based on the summary of the dialog exchange between you and the User. Learn from the example below.
+Example:
+This is a summary of a dialog exchange between you and the User:
+{0}
+Based on the summary of the dialog exchange, give a consistent and engaging response to the following dialogue by the User.
+User:{1} 
+Bot:{2}
+Now try it yourself.
+This is a summary of a dialog exchange between you and the User:
+{3}
+Given the summary of the dialog exchange between User and Bot, give a consistent and engaging response to the following dialog by User
+User:{4}
+ Bot:"
+,,manual,FALSE,FALSE,semantic-k;bart;recent-k;full,,shorter_prompt_template,"You are an Automated Chat System :
+This is a summary of a dialog exchange between Person1 and Person2:
+{0}
+Given the summary of the dialog exchange between Person1 and Person2, give a consistent and engaging response to the following dialog by Person1.
+Person1:{1}
+Person2:","You are an Automated Chat System :
+This is a summary of a dialog exchange between User and Bot:
+{0}
+Given the summary of the dialog exchange between User and Bot, give a consistent and engaging response to the following dialog by User.
+User:{1}
+ Bot:"
+,,manual,FALSE,FALSE,none,,current_utterance_short_template,"Give a consistent and engaging response to the following dialog spoken by Person1
+Person1:{0}
+Person2:","Give a consistent and engaging response to the following dialog spoken by User
+User:{0}
+ Bot:"
+,,manual,TRUE,FALSE,none,,current_utterance_template,"Give a consistent and engaging response to the following dialog spoken by Person1.Learn from the example first.
+Person1: {0}
+ Person2: {1}
+Now try it yourself:
+Give a consistent and engaging response to the following dialog spoken by Person1
+Person1:{2}
+Person2:","Give a consistent and engaging response to the following dialog spoken by User.Learn from the example first.
+User: {0}
+ Bot: {1}
+Now try it yourself:
+Give a consistent and engaging response to the following dialog spoken by User
+User:{2}
+ Bot:"
+MSC,,manual,TRUE,TRUE,none,,prompt_template_persona,"You are an Automated Chat System :
+Learn from the below example on how to use background details to generate a consistent and engaging response to what Person1 says.
+Example:
+Here are some background details about Person1:
+{1}
+Here are some background details about Person2:
+{0}
+Given the background details of Person1 and Person2, give a consistent and engaging response to the following dialog spoken by Person1.
+Person1: {2}
+ Person2: {3}
+Now try it yourself:
+Here are some background details about Person1:
+{4}
+Here are some background details about Person2:
+{5}
+Given the background details of Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {6}
+Person2:","You are an Automated Chat System :
+Learn from the below example on how to use background details to generate a consistent and engaging response to what User says.
+Example:
+Here are some background details about User:
+{1}
+Here are some background details about Bot:
+{0}
+Given the background details of User and Bot, give a consistent and engaging response to the following dialog spoken by User.
+User: {2}
+ Bot: {3}
+Now try it yourself:
+Here are some background details about User:
+{4}
+Here are some background details about Bot:
+{5}
+Given the background details of User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {6}
+Bot:"
+MSC,,manual,FALSE,TRUE,none,,shorter_prompt_template_persona,"You are an Automated Chat System :
+Here are some background details about Person1:
+{0}
+Here are some background details about Person2:
+{1}
+Given the background details of Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {2}
+Person2:","You are an Automated Chat System :
+Here are some background details about User:
+{0}
+Here are some background details about Bot:
+{1}
+Given the background details of User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {2}
+Bot:"
+MSC,,manual,TRUE,TRUE,semantic-k;bart;recent-k;full,,prompt_template_persona_and_summary,"You are an Automated Chat System :
+Learn from the below example on how to generate consistent and engaging responses between Person1 and Person2 given background details along with summary.
+Example:
+Here are some background details about Person1:
+{1}
+Here are some background details about Person2:
+{0}
+This is a summary of a dialog exchange between Person1 and Person2:
+{2}
+Given the background details and the summary of the dialog exchange between Person1 and Person2, give a consistent and engaging response to the following dialog by Person1.
+Person1:{3}
+ Person2:{4}
+Now try it yourself:
+Here are some background details about Person1:
+{5}
+Here are some background details about Person2:
+{6}
+This is a summary of a dialog exchange between Person1 and Person2:
+{7}
+Given the summary of the dialog exchange between Person1 and Person2 and their background details, give a consistent and engaging response to the following dialog spoken by Person1
+Person1:{8}
+Person2:","You are an Automated Chat System :
+Learn from the below example on how to generate consistent and engaging responses between User and Bot given background details along with summary.
+Example:
+Here are some background details about User:
+{1}
+Here are some background details about Bot:
+{0}
+This is a summary of a dialog exchange between User and Bot:
+{2}
+Given the background details and the summary of the dialog exchange between User and Bot, give a consistent and engaging response to the following dialog by User.
+User:{3}
+ Bot:{4}
+Now try it yourself:
+Here are some background details about User:
+{5}
+Here are some background details about Bot:
+{6}
+This is a summary of a dialog exchange between User and Bot:
+{7}
+Given the summary of the dialog exchange between User and Bot and their background details, give a consistent and engaging response to the following dialog spoken by User
+User:{8}"
+MSC,,manual,FALSE,TRUE,semantic-k;bart;recent-k;full,,shorter_prompt_template_persona_and_summary,"You are an Automated Chat System :
+Here are some background details about Person1:
+{0}
+Here are some background details about Person2:
+{1}
+This is a summary of a dialog exchange between Person1 and Person2:
+{2}
+Given the background details and the summary of the dialog exchange between Person1 and Person2, give a consistent and engaging response to the following dialog by Person1
+Person1:{3}
+Person2:","You are an Automated Chat System :
+Here are some background details about User:
+{0}
+Here are some background details about Bot:
+{1}
+This is a summary of a dialog exchange between User and Bot:
+{2}
+Given the background details and the summary of the dialog exchange between User and Bot, give a consistent and engaging response to the following dialog by User
+User:{3}"
+TC,,manual,FALSE,TRUE,none,,shorter_prompt_template_onlyknowledge,"You are an Automated Chat System :
+Here is some data on the topics Person1 and Person2 are discussing about:
+{0}
+Based on the information about the topics being discussed by Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {1}
+Person2:","You are an Automated Chat System :
+Here is some data on the topics User and Bot are discussing about:
+{0}
+Based on the information about the topics being discussed by User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {1}
+Bot:"
+TC,,manual,TRUE,TRUE,none,,prompt_template_onlyknowledge,"You are an Automated Chat System :
+Learn from the below example on how to use information about the topics being discussed by Person1 and Person2 to generate a suitable response by Person2 on what Person1 says. 
+Example:
+Here is some infomation about the topics Person1 and Person2 are discussing about:
+{0}
+Based on the above information, give a suitable response to the following dialog spoken by Person1.
+Person1:{1} Person2:
+{2}
+Now try it yourself:
+Here is some information about the topics being discussed by Person1 and Person2:
+{3}
+Given the information about the topics being discussed by Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {4}
+Person2:","You are an Automated Chat System :
+Learn from the below example on how to use information about the topics being discussed by User and Bot to generate a suitable response by Bot on what User says. 
+Example:
+Here is some infomation about the topics User and Bot are discussing about:
+{0}
+Based on the above information, give a suitable response to the following dialog spoken by User.
+User:{1} Bot:
+{2}
+Now try it yourself:
+Here is some information about the topics being discussed by User and Bot:
+{3}
+Given the information about the topics being discussed by User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {4}
+Bot:"
+TC,,manual,FALSE,TRUE,semantic-k;bart;recent-k;full,,shorter_prompt_template_knowledge_and_summary,"You are an Automated Chat System :
+Here is some data on the topics Person1 and Person2 are discussing about:
+{0}
+Here is a summary of the conversation between Person1 and Person2:
+{1}
+Based on the conversation summary and the information about the topics being discussed by Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {2}
+Person2:","You are an Automated Chat System :
+Here is some data on the topics User and Bot are discussing about:
+{0}
+Here is a summary of the conversation between User and Bot:
+{1}
+Based on the conversation summary and the information about the topics being discussed by User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {2}
+Bot:"
+TC,,manual,TRUE,TRUE,semantic-k;bart;recent-k;full,,prompt_template_knowledge_and_summary,"You are an Automated Chat System :
+Learn from the below example on how to use the conversation summary along with the information about the topics being discussed by Person1 and Person2 to generate a suitable response by Person2 on what Person1 says. 
+Example:
+Here is some infomation about the topics Person1 and Person2 are discussing about:
+{0}
+Here is the conversation summary between Person1 and Person2:
+{1}
+Based on the above information, give a suitable response to the following dialog spoken by Person1.
+Person1:{2} Person2:
+{3}
+Now try it yourself:
+Here is some information about the topics being discussed by Person1 and Person2:
+{4}
+Here is a summary of the conversation between Person1 and Person2:
+{5}
+Given the conversation summary and the information about the topics being discussed by Person1 and Person2 , give a consistent and engaging response to the following dialog spoken by Person1
+Person1: {6}
+Person2:","You are an Automated Chat System :
+Learn from the below example on how to use the conversation summary along with the information about the topics being discussed by User and Bot to generate a suitable response by Bot on what User says. 
+Example:
+Here is some infomation about the topics User and Bot are discussing about:
+{0}
+Here is the conversation summary between User and Bot:
+{1}
+Based on the above information, give a suitable response to the following dialog spoken by User.
+User:{2} Bot:
+{3}
+Now try it yourself:
+Here is some information about the topics being discussed by User and Bot:
+{4}
+Here is a summary of the conversation between User and Bot:
+{5}
+Given the conversation summary and the information about the topics being discussed by User and Bot , give a consistent and engaging response to the following dialog spoken by User
+User: {6}
+Bot:"
+,,manual,FALSE,FALSE,,,fsb_prompt,"Person1 Information:
+{0}
+Person2 information:
+{1}
+Dialogue:Person1: {2}
+Person2: {3}
+Person1: {4}
+Person2:","User Information:
+{0}
+Bot information:
+{1}
+Dialogue:User: {2}
+Bot: {3}
+User: {4}
+Bot:"
+MSC,T0,ppl,FALSE,FALSE,none,,ppl_based_cutt_T0,"predict what is the next thing that the Person2 might say after hearing this dialogue by Person1?
+Person1: ""{0}""
+Person2:","predict what is the next thing that the Bot might say after hearing this dialogue by User?\nUser: ""{0}""\nBot:"
+MSC,T0,ppl,TRUE,FALSE,none,,ppl_based_cutt_T0_ex,"Predict what might have been said by the Person2 following this dialogue by the Person1. 
+
+Learn from the example first.
+Person1: ""{0}""
+Person2: ""{1}""
+
+Now try it yourself. Predict what might have been said by the Person2 following this dialogue by the Person1.
+Person1: ""{2}""
+Person2:","Predict what might have been said by the Bot following this dialogue by the User. Learn from the example first.\nUser: ""{0}""\nBot: ""{1}""\nNow try it yourself. Predict what might have been said by the Bot following this dialogue by the User.\nUser: ""{2}""\nBot:"
+MSC,flan-t5,ppl,FALSE,FALSE,none,,ppl_based_cutt_flanT5,"how would the Person2 respond to the dialogues initiated by the Person1 in a way that the conversation continues to be consistent and interesting.
+Person1: ""{0}""
+Person2:","how would the Bot respond to the dialogues initiated by the User in a way that the conversation continues to be consistent and interesting.\nUser: ""{0}""\nBot:"
+MSC,flan-t5,ppl,TRUE,FALSE,none,,ppl_based_cutt_flanT5_ex,"Predict what is the next thing that the Person2 might say after hearing this dialogue by Person1? 
+
+Learn from the example first.
+Person1: ""{0}""
+Person2: ""{1}""
+
+Now try it yourself. Predict what is the next thing that the Person2 might say after hearing this dialogue by Person1?
+Person1: ""{2}""
+Person2:","Predict what is the next thing that the Bot might say after hearing this dialogue by User? Learn from the example first.\nUser: ""{0}""\nBot: ""{1}""\nNow try it yourself. Predict what is the next thing that the Bot might say after hearing this dialogue by User?\nUser: ""{2}""\nBot:"
+MSC,tk-instruct,ppl,FALSE,FALSE,none,,ppl_based_cutt_tk_instruct,"predict what the Person2 would say after listening to the Person1's dialogue.
+Person1: ""{0}""
+Person2:","predict what the Bot would say after listening to the User's dialogue.\nUser: ""{0}""\nBot:"
+MSC,tk-instruct,ppl,TRUE,FALSE,none,,ppl_based_cutt_tk_instruct_ex,"Predict what might have been said by the Person2 following this dialogue by the Person1. 
+
+Learn from the example first.
+Person1: ""{0}""
+Person2: ""{1}""
+
+Now try it yourself. Predict what might have been said by the Person2 following this dialogue by the Person1.
+Person1: ""{2}""
+Person2:","Predict what might have been said by the Bot following this dialogue by the User. Learn from the example first.\nUser: ""{0}""\nBot: ""{1}""\nNow try it yourself. Predict what might have been said by the Bot following this dialogue by the User.\nUser: ""{2}""\nBot:"
+MSC,T0,ppl,FALSE,FALSE,bart;full;recent-k,,pegasusft_template_pplbased_T0,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next?
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next?
+User: ""{1}"""
+MSC,flan-t5,ppl,FALSE,FALSE,bart;full;recent-k,,pegasusft_template_pplbased_flanT5,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{1}"""
+MSC,tk-instruct,ppl,FALSE,FALSE,bart;full;recent-k,,pegasusft_template_pplbased_tk_instruct,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the given summary of the conversation between the Person1 and the Person2, predict what Person2 would say after the Person1 said this dialogue.
+Person1: ""{1}""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the given summary of the conversation between the User and the Bot, predict what Bot would say after the User said this dialogue.
+User: ""{1}""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
+MSC,flan-t5,ppl,TRUE,FALSE,bart;full;recent-k,,pegasusft_template_pplbased_flanT5_withex,"The task is to predict what the Person2 will say next, Given the summary of conversation between Person1 and Person2. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between Person1 and Person2: 
+ ""{0}"" 
+ Based on the summary of the conversation given, what do you think the Person2 will say next? 
+ Person1: ""{1}"" 
+ Person2: ""{2}"" 
+ Now try it yourself. 
+ Here is a conversation summary between Person1 and Person2: 
+ ""{3}"" 
+ Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next? 
+ Person1: ""{4}""
+ Person2:","The task is to predict what the Bot will say next, Given the summary of conversation between User and Bot. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between User and Bot: 
+ ""{0}"" 
+ Based on the summary of the conversation given, what do you think the Bot will say next? 
+ User: ""{1}"" 
+ Bot: ""{2}"" 
+ Now try it yourself. 
+ Here is a conversation summary between User and Bot: 
+ ""{3}"" 
+ Based on the summary of conversation between User and Bot, what do you think Bot will say next? 
+ User: ""{4}"""
+MSC,tk-instruct,ppl,TRUE,FALSE,bart;full;recent-k;semantic-k,,pegasusft_template_pplbased_tk_instruct_withex,"The task is to predict what might have been said in response to the Person1's dialogue in the light of the provided conversation summary. Learn from the example first.
+ Example:
+ Here is a conversation summary between Person1 and Person2: 
+""{0}""
+ In the light of this given summary predict might have been said in response to the following dialogue by the Person1.
+ Person1: ""{1}""
+ Person2: ""{2}""
+ Now try it yourself.
+ Here is a conversation summary between Person1 and Person2:
+""{3}""
+ In the light of the provided conversation summary between the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+ Person1: ""{4}""
+ Person2:","The task is to predict what might have been said in response to the User's dialogue in the light of the provided conversation summary. Learn from the example first.
+ Example:
+ Here is a conversation summary between User and Bot: 
+""{0}""
+ In the light of this given summary predict might have been said in response to the following dialogue by the User.
+ User: ""{1}""
+ Bot: ""{2}""
+ Now try it yourself.
+ Here is a conversation summary between User and Bot:
+""{3}""
+ In the light of the provided conversation summary between the User and the Bot, predict what might have been said following this dialogue by the User.
+ User: ""{4}"""
+MSC,T0,ppl,TRUE,FALSE,bart;full,,pegasusft_template_pplbased_T0_withex,"The task is to predict a suitable response to the Person1's dialogue based on the given conversation summary. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between Person1 and Person2:
+""{0}""
+Based on the conversation between the Person1 and the Person2, predict what the Person2 might have said in response to the Person1's dialogue.
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is a conversation summary between Person1 and Person2:
+""{3}""
+Based on the conversation between the Person1 and the Person2, predict what the Person2 might have said in response to the Person1's dialogue.
+Person1: ""{4}""
+Person2:","The task is to predict a suitable response to the User's dialogue based on the given conversation summary. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between User and Bot:
+""{0}""
+Based on the conversation between the User and the Bot, predict what the Bot might have said in response to the User's dialogue.
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is a conversation summary between User and Bot:
+""{3}""
+Based on the conversation between the User and the Bot, predict what the Bot might have said in response to the User's dialogue.
+User: ""{4}"""
+MSC,T0,ppl,FALSE,TRUE,none,,only_persona_pplbased_T0,"Here are some persona details about the Person1 and Person2:
+""{0}""
+""{1}""
+Based on the given persona details about the Person1 and the Person2, predict what Person2 would say after the Person1 said this dialogue.
+Person1: ""{2}""
+Person2:","Here are some persona details about the User and Bot:
+""{0}""
+""{1}""
+Based on the given persona details about the User and the Bot, predict what Bot would say after the User said this dialogue.
+User: ""{2}"""
+MSC,T0,ppl,TRUE,TRUE,none,,only_persona_pplbased_T0_withex,"The task is to give a suitable response to the Person1 based on the information given about the Person1 and the Person2. Learn from the example first.
+Example:
+ Here is some information about the Person1 and Person2:
+""{0}""
+""{1}""
+Based on the information provided about the Person1 and the Person2, predict what the Person2 might have said in response to the Person1's dialogue.
+Person1: ""{2}""
+Person2: ""{3}""
+Now try it yourself.
+Here is some information about the Person1 and Person2:
+""{4}""
+""{5}
+Based on the information provided about the Person1 and the Person2, predict what the Person2 might have said in response to the Person1's dialogue.
+Person1: ""{6}""
+Person2:","The task is to give a suitable response to the User based on the information given about the User and the Bot. Learn from the example first.
+Example:
+ Here is some information about the User and Bot:
+""{0}""
+""{1}""
+Based on the information provided about the User and the Bot, predict what the Bot might have said in response to the User's dialogue.
+User: ""{2}""
+Bot: ""{3}""
+Now try it yourself.
+Here is some information about the User and Bot:
+""{4}""
+""{5}
+Based on the information provided about the User and the Bot, predict what the Bot might have said in response to the User's dialogue.
+User: ""{6}"""
+MSC,flan-t5,ppl,FALSE,TRUE,none,,only_persona_pplbased_flanT5,"Here is some information about the Person1 and Person2:
+""{0}""
+""{1}""
+Based on the information provided about the Person1 and the Person2, predict what the Person2 might have said in response to the Person1's dialogue.
+Person1: ""{2}""
+Person2:","Here is some information about the User and Bot:
+""{0}""
+""{1}""
+Based on the information provided about the User and the Bot, predict what the Bot might have said in response to the User's dialogue.
+User: ""{2}"""
+MSC,flan-t5,ppl,TRUE,TRUE,none,,only_persona_pplbased_flanT5_withex,"The task is to give a suitable response to what the Person1 says, based on the information given about the Person1 and the Person2. Learn from the example first.
+Example:
+Here is some information about the Person1 and Person2:
+""{0}""
+""{1}""
+ Based on the information provided about the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2: ""{3}""
+Now try it yourself.
+Here is some information about the Person1 and Person2:
+""{4}""
+""{5}
+Based on the information provided about the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{6}""
+Person2:","The task is to give a suitable response to what the User says, based on the information given about the User and the Bot. Learn from the example first.
+Example:
+Here is some information about the User and Bot:
+""{0}""
+""{1}""
+ Based on the information provided about the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{2}""
+Bot: ""{3}""
+Now try it yourself.
+Here is some information about the User and Bot:
+""{4}""
+""{5}
+Based on the information provided about the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{6}"""
+MSC,T0,ppl,FALSE,TRUE,semantic-k;bart;recent-k;full,,persona_and_summary_pplbased_T0,"Here are some persona details about the Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{3}""
+Person2:","Here are some persona details about the User and Bot:
+""{0}""
+""{1}""
+Here is a conversation summary between User and Bot:
+""{2}""
+Based on the persona information of the User and the Bot and their conversation summary so far, anticipate what the Bot's response might be to the User's next statement.
+User: ""{3}"""
+MSC,T0,ppl,TRUE,TRUE,semantic-k;bart;recent-k;full,,persona_and_summary_pplbased_T0_withex,"The task is to give a suitable response to what the Person1 says based on the personal details of the Person1 and the Person2 and their conversation summary. Learn from the example first.
+Example:
+Here is some information about Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+ Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{3}""
+Person2: ""{4}""
+Now try it yourself.
+Here are some persona details about the Person1 and Person2:
+""{5}""
+""{6}
+Here is a conversation summary between Person1 and Person2.
+""{7}""
+Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{8}""
+Person2:","The task is to give a suitable response to what the User says based on the personal details of the User and the Bot and their conversation summary. Learn from the example first.
+Example:
+Here is some information about User and Bot:
+""{0}""
+""{1}""
+Here is a conversation summary between User and Bot:
+""{2}""
+ Based on the persona information of the User and the Bot and their conversation summary so far, anticipate what the Bot's response might be to the User's next statement.
+User: ""{3}""
+Bot: ""{4}""
+Now try it yourself.
+Here are some persona details about the User and Bot:
+""{5}""
+""{6}
+Here is a conversation summary between User and Bot.
+""{7}""
+Based on the persona information of the User and the Bot and their conversation summary so far, anticipate what the Bot's response might be to the User's next statement.
+User: ""{8}"""
+MSC,flan-t5,ppl,TRUE,TRUE,semantic-k;bart;recent-k;full,,persona_and_summary_pplbased_flanT5_withex,"The task is to give a suitable response to what the Person1 says based on the personal details of the Person1 and the Person2 and their conversation summary. Take a look at the example for guidance.
+Example:
+Here is some information about Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+In the light of the conversation summary and the information provided about the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{3}""
+Person2: ""{4}""
+Now try it yourself.
+Here is some information about the Person1 and Person2:
+""{5}""
+""{6}
+Here is a conversation summary between Person1 and Person2.
+""{7}""
+In the light of the conversation summary and the information provided about the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{8}""
+Person2:","The task is to give a suitable response to what the User says based on the personal details of the User and the Bot and their conversation summary. Take a look at the example for guidance.
+Example:
+Here is some information about User and Bot:
+""{0}""
+""{1}""
+Here is a conversation summary between User and Bot:
+""{2}""
+In the light of the conversation summary and the information provided about the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{3}""
+Bot: ""{4}""
+Now try it yourself.
+Here is some information about the User and Bot:
+""{5}""
+""{6}
+Here is a conversation summary between User and Bot.
+""{7}""
+In the light of the conversation summary and the information provided about the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{8}"""
+MSC,flan-t5,ppl,FALSE,TRUE,semantic-k;bart;recent-k;full,,persona_and_summary_pplbased_flanT5,"Here are some persona details about the Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{3}""
+Person2:","Here are some persona details about the User and Bot:
+""{0}""
+""{1}""
+Here is a conversation summary between User and Bot:
+""{2}""
+Based on the persona information of the User and the Bot and their conversation summary so far, anticipate what the Bot's response might be to the User's next statement.
+User: ""{3}"""
+MSC,tk-instruct,ppl,FALSE,TRUE,bart,,persona_and_summary_pplbased_tk_instruct,"Here are some persona details about the Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{3}""
+Person2:",
+MSC,T0,ppl,FALSE,FALSE,semantic-k,,semantic_template_pplbased_T0,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next?
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next?
+User: ""{1}"""
+MSC,flan-t5,ppl,FALSE,FALSE,semantic-k,,semantic_template_pplbased_flanT5,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{1}"""
+MSC,tk-instruct,ppl,FALSE,FALSE,semantic-k,,semantic_template_pplbased_tk_instruct,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the given summary of the conversation between the Person1 and the Person2, predict what Person2 would say after the Person1 said this dialogue.
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the given summary of the conversation between the User and the Bot, predict what Bot would say after the User said this dialogue.
+User: ""{1}"""
+MSC,T0,ppl,TRUE,FALSE,recent-k,,prevutt_template_pplbased_T0_withex,"The task is to give a suitable response to what the Person1 says based on the given conversation history between Person1 and Person2. Take a look at the following example for guidance.
+Here is a conversation summary between Person1 and Person2:
+""{0}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is a conversation summary between Person1 and Person2:
+""{3}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{4}""
+Person2:","The task is to give a suitable response to what the User says based on the given conversation history between User and Bot. Take a look at the following example for guidance.
+Here is a conversation summary between User and Bot:
+""{0}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is a conversation summary between User and Bot:
+""{3}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{4}"""
+MSC,flan-t5,ppl,TRUE,FALSE,semantic-k,,semantic_template_pplbased_flanT5_withex,"The task is to predict what the Person2 will say next, Given the summary of conversation between Person1 and Person2. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between Person1 and Person2: 
+ ""{0}"" 
+ Based on the summary of the conversation given, what do you think the Person2 will say next? 
+ Person1: ""{1}"" 
+ Person2: ""{2}"" 
+ Now try it yourself. 
+ Here is a conversation summary between Person1 and Person2: 
+ ""{3}"" 
+ Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next? 
+ Person1: ""{4}""
+ Person2:","The task is to predict what the Bot will say next, Given the summary of conversation between User and Bot. Take a look at the following example for guidance.
+ Example:
+ Here is a conversation summary between User and Bot: 
+ ""{0}"" 
+ Based on the summary of the conversation given, what do you think the Bot will say next? 
+ User: ""{1}"" 
+ Bot: ""{2}"" 
+ Now try it yourself. 
+ Here is a conversation summary between User and Bot: 
+ ""{3}"" 
+ Based on the summary of conversation between User and Bot, what do you think Bot will say next? 
+ User: ""{4}"""
+MSC,T0,ppl,TRUE,FALSE,semantic-k,,semantic_template_pplbased_T0_withex,"The task is to give a suitable response to what the Person1 says based on the given conversation history between Person1 and Person2. Take a look at the following example for guidance.
+Here is a conversation summary between Person1 and Person2:
+""{0}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is a conversation summary between Person1 and Person2:
+""{3}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{4}""
+Person2:","The task is to give a suitable response to what the User says based on the given conversation history between User and Bot. Take a look at the following example for guidance.
+Here is a conversation summary between User and Bot:
+""{0}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is a conversation summary between User and Bot:
+""{3}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{4}"""
+MSC,flan-t5,ppl,TRUE,FALSE,,,dialogcse_template_pplbased_flanT5_withex,"Here is a conversation summary between Person1 and Person2:
+""{0}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next? Take a look at the following example for guidance.
+Example:
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is a conversation summary between Person1 and Person2:
+""{3}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next?
+Person1: ""{4}""
+Person2:","Here is a conversation summary between User and Bot:
+""{0}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next? Take a look at the following example for guidance.
+Example:
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is a conversation summary between User and Bot:
+""{3}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next?
+User: ""{4}"""
+MSC,T0,ppl,TRUE,FALSE,,,dialogcse_template_pplbased_T0_withex,"Here is a conversation summary between Person1 and Person2:
+""{0}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement. Learn from the example first.
+Example:
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is a conversation summary between Person1 and Person2:
+""{3}""
+Based on the dialogue between the Person1 and the Person2 so far, try to anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{4}""
+Person2:","Here is a conversation summary between User and Bot:
+""{0}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement. Learn from the example first.
+Example:
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is a conversation summary between User and Bot:
+""{3}""
+Based on the dialogue between the User and the Bot so far, try to anticipate what the Bot's response might be to the User's next statement.
+User: ""{4}"""
+MSC,flan-t5,ppl,FALSE,FALSE,,,dialogcse_template_pplbased_flanT5,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next?
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next?
+User: ""{1}"""
+MSC,T0,ppl,FALSE,FALSE,,,dialogcse_template_pplbased_T0,"Here is a summary of the conversation between Person1 and Person2:
+""{0}""
+Based on the summary of conversation between Person1 and Person2, what do you think Person2 will say next?
+Person1: ""{1}""
+Person2:","Here is a summary of the conversation between User and Bot:
+""{0}""
+Based on the summary of conversation between User and Bot, what do you think Bot will say next?
+User: ""{1}"""
+MSC,tk-instruct,ppl,TRUE,TRUE,bart,,persona_and_summary_pplbased_tk_instruct_withex,"The task is to give a suitable response to what the Person1 says based on the personal details of the Person1 and the Person2 and their conversation summary. Learn from the example first.
+Example:
+Here is some information about Person1 and Person2:
+""{0}""
+""{1}""
+Here is a conversation summary between Person1 and Person2:
+""{2}""
+ Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{3}""
+Person2: ""{4}""
+Now try it yourself.
+Here are some persona details about the Person1 and Person2:
+""{5}""
+""{6}
+Here is a conversation summary between Person1 and Person2.
+""{7}""
+Based on the persona information of the Person1 and the Person2 and their conversation summary so far, anticipate what the Person2's response might be to the Person1's next statement.
+Person1: ""{8}""
+Person2:",
+TC,T0,ppl,FALSE,TRUE,none,,only_knowledge_pplbased_T0,"Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+In the light of the information about the topics being discussed by the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{1}""
+Person2:","Here is some data on the topics the User and Bot are discussing about:
+""{0}""
+In the light of the information about the topics being discussed by the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{1}"""
+TC,flan-t5,ppl,FALSE,TRUE,none,,only_knowledge_pplbased_flanT5,"Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Based on the data about the topics being discussed by the Person1 and the Person2, anticipate what the Person2 might have said next in response to the Person1's dialogue.
+Person1: ""{1}""
+Person2:","Here is some data on the topics the User and Bot are discussing about:
+""{0}""
+Based on the data about the topics being discussed by the User and the Bot, anticipate what the Bot might have said next in response to the User's dialogue.
+User: ""{1}"""
+TC,T0,ppl,TRUE,TRUE,none,,only_knowledge_pplbased_T0_withex,"The task is to give a suitable response to what the Person1 says based on the information about the topics the Person1 and Person2 are discussing about. Learn from the example first.
+Example:
+Here is some information on the topics being discussed by Person1 and Person2:
+""{0}""
+In the light of the information about the topics being discussed by the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{3}""
+In the light of the information about the topics being discussed by the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{4}""
+Person2:","The task is to give a suitable response to what the User says based on the information about the topics the User and Bot are discussing about. Learn from the example first.
+Example:
+Here is some information on the topics being discussed by User and Bot:
+""{0}""
+In the light of the information about the topics being discussed by the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is some data on the topics the User and Bot are discussing about:
+""{3}""
+In the light of the information about the topics being discussed by the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{4}"""
+TC,flan-t5,ppl,TRUE,TRUE,none,,only_knowledge_pplbased_flanT5_withex,"The task is to give a suitable response to what the Person1 says based on the information about the topics the Person1 and Person2 are discussing about. Learn from the example first.
+Example:
+Here is some information on the topics being discussed by Person1 and Person2:
+""{0}""
+Based on the data about the topics being discussed by the Person1 and the Person2, anticipate what the Person2 might have said next in response to the Person1's dialogue.
+Person1: ""{1}""
+Person2: ""{2}""
+Now try it yourself.
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{3}""
+Based on the data about the topics being discussed by the Person1 and the Person2, anticipate what the Person2 might have said next in response to the Person1's dialogue.
+Person1: ""{4}""
+Person2:","The task is to give a suitable response to what the User says based on the information about the topics the User and Bot are discussing about. Learn from the example first.
+Example:
+Here is some information on the topics being discussed by User and Bot:
+""{0}""
+Based on the data about the topics being discussed by the User and the Bot, anticipate what the Bot might have said next in response to the User's dialogue.
+User: ""{1}""
+Bot: ""{2}""
+Now try it yourself.
+Here is some data on the topics the User and Bot are discussing about:
+""{3}""
+Based on the data about the topics being discussed by the User and the Bot, anticipate what the Bot might have said next in response to the User's dialogue.
+User: ""{4}"""
+TC,T0,ppl,FALSE,TRUE,semantic-k;bart;recent-k;full,,knowledge_and_summary_pplbased_T0,"Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+In the light of the chat history and information about topics that the Person1 and the Person2 are chatting on, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2:","Here is some data on the topics the User and Bot are discussing about:
+""{0}""
+Here is a conversation summary between User and Bot:
+""{1}""
+In the light of the chat history and information about topics that the User and the Bot are chatting on, predict what might have been said following this dialogue by the User.
+User: ""{2}"""
+TC,flan-t5,ppl,FALSE,TRUE,semantic-k;bart;recent-k;full,,knowledge_and_summary_pplbased_flanT5,"Here is some information on the topics being discussed by Person1 and Person2:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+In the light of the conversation history and information about the topics being discussed by the Person1 and the Person2, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2:","Here is some information on the topics being discussed by User and Bot:
+""{0}""
+Here is a conversation summary between User and Bot:
+""{1}""
+In the light of the conversation history and information about the topics being discussed by the User and the Bot, predict what might have been said following this dialogue by the User.
+User: ""{2}"""
+TC,tk-instruct,ppl,FALSE,TRUE,bart,,knowledge_and_summary_pplbased_tk_instruct,"Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+In the light of the chat history and information about topics that the Person1 and the Person2 are chatting on, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2:",
+TC,T0,ppl,TRUE,TRUE,semantic-k;bart;recent-k;full,,knowledge_and_summary_pplbased_T0_withex,"The task is to give a suitable response to what the Person1 says based on the Person1 and Person2's chat history and the information about the topics they are discussing about.Take a look at the example for guidance.
+Example:
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+Based on the chat history and the data on topics that the Person1 and the Person2 are chatting about, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2: ""{3}""
+Now try it yourself.
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{4}""
+Here is a conversation summary between Person1 and Person2.
+""{5}""
+Based on the chat history and the data on topics that the Person1 and the Person2 are chatting about, predict what might have been said following this dialogue by the Person1.
+Person1: ""{6}""
+Person2:","The task is to give a suitable response to what the User says based on the User and Bot's chat history and the information about the topics they are discussing about.Take a look at the example for guidance.
+Example:
+Here is some data on the topics the User and Bot are discussing about:
+""{0}""
+Here is a conversation summary between User and Bot:
+""{1}""
+Based on the chat history and the data on topics that the User and the Bot are chatting about, predict what might have been said following this dialogue by the User.
+User: ""{2}""
+Bot: ""{3}""
+Now try it yourself.
+Here is some data on the topics the User and Bot are discussing about:
+""{4}""
+Here is a conversation summary between User and Bot.
+""{5}""
+Based on the chat history and the data on topics that the User and the Bot are chatting about, predict what might have been said following this dialogue by the User.
+User: ""{6}"""
+TC,flan-t5,ppl,TRUE,TRUE,semantic-k;bart;recent-k;full,,knowledge_and_summary_pplbased_flanT5_withex,"The task is to give a suitable response to what the Person1 says based on the Person1 and Person2's chat history and the information about the topics they are discussing about. Learn from the example first.
+Example:
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+In the light of the chat history and information about topics that the Person1 and the Person2 are chatting on, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2: ""{3}""
+Now try it yourself.
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{4}""
+Here is a conversation summary between Person1 and Person2.
+""{5}""
+In the light of the chat history and information about topics that the Person1 and the Person2 are chatting on, predict what might have been said following this dialogue by the Person1.
+Person1: ""{6}""
+Person2:","The task is to give a suitable response to what the User says based on the User and Bot's chat history and the information about the topics they are discussing about. Learn from the example first.
+Example:
+Here is some data on the topics the User and Bot are discussing about:
+""{0}""
+Here is a conversation summary between User and Bot:
+""{1}""
+In the light of the chat history and information about topics that the User and the Bot are chatting on, predict what might have been said following this dialogue by the User.
+User: ""{2}""
+Bot: ""{3}""
+Now try it yourself.
+Here is some data on the topics the User and Bot are discussing about:
+""{4}""
+Here is a conversation summary between User and Bot.
+""{5}""
+In the light of the chat history and information about topics that the User and the Bot are chatting on, predict what might have been said following this dialogue by the User.
+User: ""{6}"""
+TC,tk-instruct,ppl,TRUE,TRUE,bart,,knowledge_and_summary_pplbased_tk_instruct_withex,"The task is to give a suitable response to what the Person1 says based on the Person1 and Person2's chat history and the information about the topics they are discussing about.Take a look at the example for guidance.
+Example:
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{0}""
+Here is a conversation summary between Person1 and Person2:
+""{1}""
+Based on the chat history and the data on topics that the Person1 and the Person2 are chatting about, predict what might have been said following this dialogue by the Person1.
+Person1: ""{2}""
+Person2: ""{3}""
+Now try it yourself.
+Here is some data on the topics the Person1 and Person2 are discussing about:
+""{4}""
+Here is a conversation summary between Person1 and Person2.
+""{5}""
+Based on the chat history and the data on topics that the Person1 and the Person2 are chatting about, predict what might have been said following this dialogue by the Person1.
+Person1: ""{6}""
+Person2:",

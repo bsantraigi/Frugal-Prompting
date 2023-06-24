@@ -1,0 +1,11 @@
+torch
+tensorflow
+transformers
+accelerate
+wandb
+evaluate
+matplotlib
+git+https://github.com/google-research/bleurt.git
+bert_score
+rouge_score
+nltk
