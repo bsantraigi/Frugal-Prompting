@@ -1,0 +1,9 @@
+wandb
+
+# Outputs
+data/evals.csv
+plots
+processed
+ROI_v2
+**__pycache__**
+**ipynb_checkpoints**
